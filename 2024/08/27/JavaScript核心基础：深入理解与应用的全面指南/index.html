@@ -1,0 +1,572 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>JavaScript核心基础：深入理解与应用的全面指南 | NGX Blog</title><meta name="keywords" content="教程,Web前端"><meta name="author" content="NGX"><meta name="copyright" content="NGX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="JavaScript核心基础：深入理解与应用的全面指南"><meta name="application-name" content="JavaScript核心基础：深入理解与应用的全面指南"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript核心基础：深入理解与应用的全面指南"><meta property="og:url" content="https://www.080912.xyz/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/index.html"><meta property="og:site_name" content="NGX Blog"><meta property="og:description" content="继续本文章是 深入了解JavaScript：从基础语法到高级应用的全面指南 的接续。先看这篇文章有助于理解哦。      引用站外地址                                                        深入了解JavaScript：从基础语法到高级应用的全"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/picx-images-hosting/refs/heads/master/PixPin_2024-10-01_11-48-52.webp"><meta property="article:author" content="NGX"><meta property="article:tag" content="技术, AI, 前端, 新时代, 自媒体"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/picx-images-hosting/refs/heads/master/PixPin_2024-10-01_11-48-52.webp"><meta name="description" content="继续本文章是 深入了解JavaScript：从基础语法到高级应用的全面指南 的接续。先看这篇文章有助于理解哦。      引用站外地址                                                        深入了解JavaScript：从基础语法到高级应用的全"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/icon.png"><link rel="canonical" href="https://www.080912.xyz/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: {"mode":"api","api":"https://color.080912.xyz/api?img=","cover_change":true},
+  authorStatus: {"skills":["👨‍💻 代码世界的建筑师","🚀 程序逻辑的探索者","💡 科技创新的先驱者","🌐 网络空间的航海家","🔧 工具与效率的追求者","🔒 安全与隐私的守护者","🎨 数字艺术的创作者","📚 知识海洋的探险者"]},
+  algolia: {"appId":"EYR6K6WXB7","apiKey":"d44d2d146e8e9d34427c7f4bc4aba97f","indexName":"hexo","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":100,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: NGX","link":"链接: ","source":"来源: NGX Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'NGX Blog',
+  title: 'JavaScript核心基础：深入理解与应用的全面指南',
+  postAI: '',
+  pageFillDescription: '继续, 案例 用户订单信息, 编写HTML和CSS, 编写JavaScript, 运算符, 赋值运算符, 自增运算符, 比较运算符, 介绍, 参数, 对比, 逻辑运算符, 优先级, 分支语句, if语句, 三元运算符, switch语句继续本文章是深入了解从基础语法到高级应用的全面指南的接续先看这篇文章有助于理解哦引用站外地址深入了解从基础语法到高级应用的全面指南案例用户订单信息编写和部分订单确认提示表格生成可以在中使用快捷键来生成部分编写声明变量商品价格商品数量收货地址计算总额商品名称商品价格商品数量总价收货地址直接和模板字符串即可输出整个表格运算符赋值运算符对变量进行赋值的运算符名称表达式描述基本赋值运算符将变量的值赋给加法赋值运算符等价于减法赋值运算符等价于乘法赋值运算符等价于除法赋值运算符等价于求余赋值运算符等价于指数赋值运算符等价于这里以指数赋值运算符举个例子等价于输出因为的次幂是自增运算符自增让变量的值加自减让变量的值减前置自增后置自增输出结果其作用相当于前置自增和后置自增有区别吗前置自增和后置自增单独使用没有区别但是进行运算时有区别如下输出输出比较运算符介绍比较运算符比较它的操作数并返回一个基于表达式是否为真的逻辑值操作数可以是数字字符串逻辑对象值字符串比较是基于标准的字典顺序使用值在多数情况下如果两个操作数不是相同的类型会尝试转换它们为恰当的类型来比较这种行为通常发生在数字作为操作数的比较类型转换的例外是使用和操作符它们会执行严格的相等和不相等比较这些运算符不会在检查相等之前转换操作数的类型字符串比较是比较字符串对应的码使用场景比较两个数据是否相等参数运算符描述等于值相等并且类型相等不相等值不相等或类型不相等大于小于大于或等于小于或等于建议以后写相等时就用因为有很多复杂情况不利于开发输出输出输出输出输出输出输出注意不等于任何包括它自己涉及到的都是对比是赋值是判断是全等开发中判断是否相等强烈推荐使用尽量不要比较小数因为有精度问题逻辑运算符如果我想表达一个大于小于怎么办错误写法正确写法符号名称日常读法特点口诀逻辑与并且符号两边都为结果才是一假则假逻辑或或者逻辑非取反变变真变假假变真练习判断一个数是的倍数且不是的倍数题目用户输入一个数字判断一个数是的倍数且不是的倍数满足条件打不满足打代码如下请输入一个数字优先级优先级运算符顺序小括号一元运算符算数运算符先后关系运算符相等运算符逻辑运算符先后赋值运算符逗号运算符分支语句语句单分支使用用法条件执行的代码括号内的条件为时进入大括号里执行代码小括号内的结果若不是布尔类型时会发生隐式转换为布尔类型双分支使用方法条件满足条件后执行的代码不满足条件后执行的代码多分支使用方法条件满足条件执行代码条件满足条件执行代码不满足条件执行代码可以写个语句三元运算符使用场景其实是比双分支更简单的写法可以使用三元表达式一般用来取值符号与配合使用语法条件满足后执行的代码不满足执行的代码练习用户输入两个数输出最大的一个请输入一个值请再输入一个值如果用户输入就会输出练习数字补零案例用户输入请输入一个数字判断语句语句用于基于不同的条件来执行不同的动作执行代码块执行代码块与和不同时执行的代码我们开发里面表达式我们经常写成变量我们的值和里面的值相匹配的时候是全等必须是值和数据类型一致才可以如果当前的里面没有则不会退出是継执行下一个例今天星期几今天是星期日今天是星期一今天是星期二今天是星期三今天是星期四今天是星期五今天是星期六例关键词今天是星期六今天是星期日期待周末',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-29 07:53:43',
+  postMainColor: '#1e1b18',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/ico/PixPin_2024-09-21_11-47-48.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://stats.uptimerobot.com/AIytbzsz8M" title="Status"><img class="back-menu-item-icon" src="https://stats.uptimerobot.com/assets/favicon.ico" alt="Status"/><span class="back-menu-item-text">Status</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://qexo.080912.xyz" title="Qexo"><img class="back-menu-item-icon" src="https://unpkg.com/qexo-static@3.0.5/qexo/images/icon.png" alt="Qexo"/><span class="back-menu-item-text">Qexo</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ningguoxu.github.io/" title="备用链接"><img class="back-menu-item-icon" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/icon.png" alt="备用链接"/><span class="back-menu-item-text">备用链接</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://qlngx.zeabur.app/" title="青龙"><img class="back-menu-item-icon" src="https://qn.whyour.cn/logo.png" alt="青龙"/><span class="back-menu-item-text">青龙</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">NGX Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/comments/"><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/about/#about-reward" target="_blank"><img class="post-qr-code-img" alt="领红包" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog@main/ico/hb.jpg"/></a><div class="post-qr-code-desc">领红包</div></li><li class="reward-item"><a href="/about/#about-reward" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog@main/ico/love.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>4</sup></a><a href="/tags/ChatGPT/" style="font-size: 1.05rem;">ChatGPT<sup>5</sup></a><a href="/tags/Github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 1.05rem;">Github开源项目<sup>3</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.05rem;">Java<sup>2</sup></a><a href="/tags/OpenAI/" style="font-size: 1.05rem;">OpenAI<sup>3</sup></a><a href="/tags/PhotoShop/" style="font-size: 1.05rem;">PhotoShop<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/Web%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">Web前端<sup>3</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>3</sup></a><a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.05rem;">云服务器<sup>6</sup></a><a href="/tags/%E4%BA%91%E7%94%B5%E8%84%91/" style="font-size: 1.05rem;">云电脑<sup>2</sup></a><a href="/tags/%E5%89%8D%E6%B2%BF%E5%BF%AB%E8%AE%AF/" style="font-size: 1.05rem;">前沿快讯<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.05rem;">图床<sup>2</sup></a><a href="/tags/%E5%B8%81%E5%9C%88/" style="font-size: 1.05rem;">币圈<sup>1</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 1.05rem;">建站<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>12</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>11</sup></a><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" style="font-size: 1.05rem;">浏览器插件<sup>1</sup></a><a href="/tags/%E7%A7%91%E6%8A%80/" style="font-size: 1.05rem;">科技<sup>5</sup></a><a href="/tags/%E7%BB%8F%E6%B5%8E/" style="font-size: 1.05rem;">经济<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.05rem;">网络安全<sup>1</sup></a><a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 1.05rem;">羊毛<sup>6</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 1.05rem;">脚本<sup>1</sup></a><a href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80/" style="font-size: 1.05rem;">黑科技<sup>5</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/09/"><span class="card-archive-list-date">九月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/" itemprop="url">网页开发</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a><a class="article-meta__tags" href="/tags/Web%E5%89%8D%E7%AB%AF/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Web前端</span></a></span></div></div><h1 class="post-title" itemprop="name headline">JavaScript核心基础：深入理解与应用的全面指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-08-27T03:17:05.000Z" title="发表于 2024-08-27 03:17:05">2024-08-27</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-08-29T07:53:43.065Z" title="更新于 2025-08-29 07:53:43">2025-08-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">2k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为地球"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>地球</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/picx-images-hosting/refs/heads/master/PixPin_2024-10-01_11-48-52.webp"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://www.080912.xyz/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/"><header><a class="post-meta-categories" href="/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/" itemprop="url">网页开发</a><a href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">教程</a><a href="/tags/Web%E5%89%8D%E7%AB%AF/" tabindex="-1" itemprop="url">Web前端</a><h1 id="CrawlerTitle" itemprop="name headline">JavaScript核心基础：深入理解与应用的全面指南</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">NGX</span><time itemprop="dateCreated datePublished" datetime="2024-08-27T03:17:05.000Z" title="发表于 2024-08-27 03:17:05">2024-08-27</time><time itemprop="dateCreated datePublished" datetime="2025-08-29T07:53:43.065Z" title="更新于 2025-08-29 07:53:43">2025-08-29</time></header><h1 id="继续"><a href="#继续" class="headerlink" title="继续"></a>继续</h1><p>本文章是 <a href="/2024/08/24/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JavaScript%EF%BC%9A%E4%BB%8E%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%88%B0%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%A6%E4%BD%A0%E9%A2%86%E7%95%A5%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%8F%AF%E8%83%BD/">深入了解JavaScript：从基础语法到高级应用的全面指南</a> 的接续。先看这篇文章有助于理解哦。</p>
+<div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="/2024/08/24/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JavaScript%EF%BC%9A%E4%BB%8E%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%88%B0%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%A6%E4%BD%A0%E9%A2%86%E7%95%A5%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%8F%AF%E8%83%BD/">
+    <div class="tag-link-tips">引用站外地址</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left" style="background-image: url(https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/ngxblog/main/cover/favicon.ico)">
+          <i class="anzhiyufont anzhiyu-icon-link" style="display: none"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">深入了解JavaScript：从基础语法到高级应用的全面指南</div>
+            <div class="tag-link-sitename"> NGX Blog</div>
+        </div>
+        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>
+    </div>
+    </a></div>
+
+<h1 id="案例-用户订单信息"><a href="#案例-用户订单信息" class="headerlink" title="案例: 用户订单信息"></a>案例: 用户订单信息</h1><h2 id="编写HTML和CSS"><a href="#编写HTML和CSS" class="headerlink" title="编写HTML和CSS"></a>编写HTML和CSS</h2><p>HTML部分</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;favicon.ico&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span>订单确认<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;script.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>✨ 提示: 表格生成可以在VSCode中使用快捷键 <code>table&gt;tr&gt;th*5</code> 来生成</p>
+</blockquote>
+<p>CSS部分</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">table</span>, <span class="selector-tag">th</span>, <span class="selector-tag">td</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line">    <span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">th</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">td</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="编写JavaScript"><a href="#编写JavaScript" class="headerlink" title="编写JavaScript"></a>编写JavaScript</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明变量</span></span><br><span class="line"><span class="keyword">let</span> price = +<span class="title function_">prompt</span>(<span class="string">&quot;商品价格&quot;</span>)</span><br><span class="line"><span class="keyword">let</span> num = +<span class="title function_">prompt</span>(<span class="string">&quot;商品数量&quot;</span>)</span><br><span class="line"><span class="keyword">let</span> address = <span class="title function_">prompt</span>(<span class="string">&quot;收货地址&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算总额</span></span><br><span class="line"><span class="keyword">let</span> totle = price * num</span><br><span class="line"></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">`</span></span><br><span class="line"><span class="string">    &lt;table&gt;</span></span><br><span class="line"><span class="string">            &lt;tr&gt;</span></span><br><span class="line"><span class="string">                &lt;th&gt;商品名称&lt;/th&gt;</span></span><br><span class="line"><span class="string">                &lt;th&gt;商品价格&lt;/th&gt;</span></span><br><span class="line"><span class="string">                &lt;th&gt;商品数量&lt;/th&gt;</span></span><br><span class="line"><span class="string">                &lt;th&gt;总价&lt;/th&gt;</span></span><br><span class="line"><span class="string">                &lt;th&gt;收货地址&lt;/th&gt;</span></span><br><span class="line"><span class="string">            &lt;/tr&gt;</span></span><br><span class="line"><span class="string">            &lt;tr&gt;</span></span><br><span class="line"><span class="string">                &lt;td&gt;JavaScript&lt;/td&gt;</span></span><br><span class="line"><span class="string">                &lt;td&gt;<span class="subst">$&#123;price&#125;</span>&lt;/td&gt;</span></span><br><span class="line"><span class="string">                &lt;td&gt;<span class="subst">$&#123;num&#125;</span>&lt;/td&gt;</span></span><br><span class="line"><span class="string">                &lt;td&gt;<span class="subst">$&#123;totle&#125;</span>&lt;/td&gt;</span></span><br><span class="line"><span class="string">                &lt;td&gt;<span class="subst">$&#123;address&#125;</span>&lt;/td&gt;</span></span><br><span class="line"><span class="string">            &lt;/tr&gt;</span></span><br><span class="line"><span class="string">        &lt;/table&gt;</span></span><br><span class="line"><span class="string">`</span>)</span><br></pre></td></tr></table></figure>
+
+<p>直接 <code>document.write()</code> 和模板字符串即可输出整个表格.</p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><blockquote>
+<p>对变量进行赋值的运算符</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">表达式</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">基本赋值运算符</td>
+<td align="center">x &#x3D; y</td>
+<td align="center">将变量<code>y</code> 的值赋给 <code>x</code></td>
+</tr>
+<tr>
+<td align="center">加法赋值运算符</td>
+<td align="center">x +&#x3D; y</td>
+<td align="center">等价于<code>x = x + y</code></td>
+</tr>
+<tr>
+<td align="center">减法赋值运算符</td>
+<td align="center">x -&#x3D; y</td>
+<td align="center">等价于<code>x = x - y</code></td>
+</tr>
+<tr>
+<td align="center">乘法赋值运算符</td>
+<td align="center">x *&#x3D; y</td>
+<td align="center">等价于<code>x = x * y</code></td>
+</tr>
+<tr>
+<td align="center">除法赋值运算符</td>
+<td align="center">x &#x2F;&#x3D; y</td>
+<td align="center">等价于<code>x = x / y</code></td>
+</tr>
+<tr>
+<td align="center">求余赋值运算符</td>
+<td align="center">x %&#x3D; y</td>
+<td align="center">等价于<code>x = x % y</code></td>
+</tr>
+<tr>
+<td align="center">指数赋值运算符</td>
+<td align="center">x **&#x3D; y</td>
+<td align="center">等价于<code>x = x ** y</code></td>
+</tr>
+</tbody></table>
+<p>这里以指数赋值运算符举个例子</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> y = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">x **= y; <span class="comment">// 等价于 x = x ** y</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 输出 125，因为 5 的 3 次幂是 125</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自增运算符"><a href="#自增运算符" class="headerlink" title="自增运算符"></a>自增运算符</h2><p>自增：<code>++</code> ， 让变量的值加1<br>自减：<code>--</code> ， 让变量的值减1</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 前置自增（后置自增:num++）</span></span><br><span class="line">++num</span><br><span class="line"><span class="comment">// 输出结果</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);</span><br></pre></td></tr></table></figure>
+
+<p>其作用相当于 <code>num+=1</code></p>
+<details class="folding-tag" ><summary> 前置自增和后置自增有区别吗？ </summary>
+              <div class='content'>
+              <ul><li>前置自增和后置自增单独使用没有区别。</li><li>但是进行运算时有区别，如下：</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(++num + <span class="number">1</span>); <span class="comment">// 输出3</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num++ + <span class="number">1</span>); <span class="comment">// 输出2</span></span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
+
+<h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
+<li>比较运算符比较它的操作数并返回一个基于表达式是否为真的逻辑值。操作数可以是数字，字符串，逻辑，对象值。字符串比较是基于标准的字典顺序，使用 Unicode 值。在多数情况下，如果两个操作数不是相同的类型，JavaScript 会尝试转换它们为恰当的类型来比较。这种行为通常发生在数字作为操作数的比较。类型转换的例外是使用 <code>===</code> 和 <code>!==</code> 操作符，它们会执行严格的相等和不相等比较。这些运算符不会在检查相等之前转换操作数的类型。</li>
+<li>字符串比较，是比较字符串对应的 ASCII码</li>
+<li>使用场景：比较两个数据，是否相等。</li>
+</ul>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x3D;&#x3D;</td>
+<td align="center">等于</td>
+</tr>
+<tr>
+<td align="center">&#x3D;&#x3D;&#x3D;</td>
+<td align="center">值相等并且类型相等</td>
+</tr>
+<tr>
+<td align="center">!&#x3D;</td>
+<td align="center">不相等</td>
+</tr>
+<tr>
+<td align="center">!&#x3D;&#x3D;</td>
+<td align="center">值不相等或类型不相等</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">大于</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">小于</td>
+</tr>
+<tr>
+<td align="center">&gt;&#x3D;</td>
+<td align="center">大于或等于</td>
+</tr>
+<tr>
+<td align="center">&lt;&#x3D;</td>
+<td align="center">小于或等于</td>
+</tr>
+</tbody></table>
+<p>建议以后写相等时就用 <code>===</code> ，因为 <code>==</code> 有很多复杂情况，不利于开发。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span> &gt; <span class="number">5</span>); <span class="comment">// 输出 false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span> &lt; <span class="number">5</span>); <span class="comment">// 输出 true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span> == <span class="string">&#x27;3&#x27;</span>); <span class="comment">// 输出 true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span> === <span class="string">&#x27;3&#x27;</span>); <span class="comment">// 输出 false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">undefined</span> == <span class="literal">null</span>); <span class="comment">// 输出 true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">undefined</span> === <span class="literal">null</span>); <span class="comment">// 输出 false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">NaN</span> === <span class="title class_">NaN</span>); <span class="comment">// 输出 false ，注意：NaN不等于任何，包括它自己。（涉及到NaN的都是false）</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><ul>
+<li><code>=</code> 是赋值。</li>
+<li><code>==</code> 是判断。</li>
+<li><code>===</code> 是全等。</li>
+<li>开发中判断是否相等，强烈推荐使用 <code>===</code> 。尽量不要比较小数，因为有精度问题。</li>
+</ul>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><details class="folding-tag" ><summary> 如果我想表达一个num大于5小于10，怎么办？ </summary>
+              <div class='content'>
+              <p>错误写法：<code>5 &lt; num &lt;10</code><br>正确写法：<code>num &gt; 5 &amp;&amp; num &lt; 10</code></p>
+              </div>
+            </details>
+
+
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">名称</th>
+<th align="center">日常读法</th>
+<th align="center">特点</th>
+<th align="center">口诀</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>&amp;&amp;</code></td>
+<td align="center">逻辑与</td>
+<td align="center">并且</td>
+<td align="center">符号两边都为true结果才是true</td>
+<td align="center">一假则假</td>
+</tr>
+<tr>
+<td align="center">&#96;</td>
+<td align="center"></td>
+<td align="center">&#96;</td>
+<td align="center">逻辑或</td>
+<td align="center">或者</td>
+</tr>
+<tr>
+<td align="center"><code>!</code></td>
+<td align="center">逻辑非</td>
+<td align="center">取反</td>
+<td align="center">true变false，false变true</td>
+<td align="center">真变假，假变真</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> &amp;&amp; <span class="literal">true</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> &amp;&amp; <span class="literal">false</span>) <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> || <span class="literal">false</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> || <span class="literal">true</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">false</span> || <span class="literal">false</span>) <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(!<span class="literal">true</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<details class="folding-tag" ><summary> 练习：判断一个数是4的倍数，且不是100的倍数。 </summary>
+              <div class='content'>
+              <p>题目：用户输入一个数字，判断一个数是4的倍数，且不是100的倍数。满足条件打True，不满足打False。<br>代码如下：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="title function_">prompt</span>(<span class="string">&quot;请输入一个数字：&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="title function_">alert</span>(num % <span class="number">4</span> === <span class="number">0</span> &amp;&amp; num %<span class="number">100</span> !== <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
+
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><table>
+<thead>
+<tr>
+<th align="center">优先级</th>
+<th align="center">运算符</th>
+<th align="center">顺序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">小括号</td>
+<td align="center">()</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">一元运算符</td>
+<td align="center">++ – !</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">算数运算符</td>
+<td align="center"><strong>先 * &#x2F; % 后 + -</strong></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">关系运算符</td>
+<td align="center">&gt; &gt;&#x3D; &lt; &lt;&#x3D;</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">相等运算符</td>
+<td align="center">&#x3D;&#x3D; !&#x3D; &#x3D;&#x3D;&#x3D; !&#x3D;&#x3D;</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">逻辑运算符</td>
+<td align="center"><strong>先 &amp;&amp; 后 ||</strong></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">赋值运算符</td>
+<td align="center">&#x3D;</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">逗号运算符</td>
+<td align="center">,</td>
+</tr>
+</tbody></table>
+<h1 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h1><h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><ol>
+<li><p>单分支使用用法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (条件) &#123;</span><br><span class="line">    执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>括号内的条件为true时，进入大括号里执行代码</li>
+<li>小括号内的结果若不是布尔类型时，会发生隐式转换为布尔类型</li>
+</ul>
+</li>
+<li><p>双分支使用方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (条件)&#123;</span><br><span class="line">    满足条件后执行的代码</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    不满足条件后执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>多分支使用方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (条件<span class="number">1</span>)&#123;</span><br><span class="line">    满足条件<span class="number">1</span>执行代码</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(条件<span class="number">2</span>)&#123;</span><br><span class="line">    满足条件<span class="number">2</span>执行代码</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    不满足条件执行代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以写N个 <code>else if()&#123;&#125;</code> 语句。</li>
+</ul>
+</li>
+</ol>
+<h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><ul>
+<li>使用场景：其实是比if双分支更简单的写法，可以使用三元表达式。一般用来取值。</li>
+<li>符号 <code>?</code> 与 <code>:</code> 配合使用</li>
+<li>语法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">条件?满足后执行的代码:不满足执行的代码</span><br></pre></td></tr></table></figure>
+
+<details class="folding-tag" ><summary> 练习：用户输入两个数，输出最大的一个 </summary>
+              <div class='content'>
+              <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var1 = <span class="title function_">prompt</span>(<span class="string">&#x27;请输入一个值：&#x27;</span>)</span><br><span class="line">var2 = <span class="title function_">prompt</span>(<span class="string">&#x27;请再输入一个值：&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(var1 &gt; var2 ? var1 : var2)</span><br></pre></td></tr></table></figure><p>如果用户输入<code>var1 = 1</code>, <code>var2 = 2</code> ；就会输出 <code>2</code>。</p>
+              </div>
+            </details>
+
+<details class="folding-tag" ><summary> 练习：数字补零案例 </summary>
+              <div class='content'>
+              <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用户输入</span></span><br><span class="line"><span class="keyword">let</span> num = +<span class="title function_">prompt</span>(<span class="string">&quot;请输入一个数字：&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断</span></span><br><span class="line">num &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + num : num</span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
+
+<h2 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h2><p>switch 语句用于基于不同的条件来执行不同的动作。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(n)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        执行代码块 <span class="number">1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        执行代码块 <span class="number">2</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">        与 <span class="keyword">case</span> <span class="number">1</span> 和 <span class="keyword">case</span> <span class="number">2</span> 不同时执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>我们开发里面表达式我们经常写成变量</li>
+<li>我们num的值和case里面的值相匹配的时候是全等必须是值和数据类型一致才可以num&#x3D;&#x3D;&#x3D;1</li>
+<li>break如果当前的case里面没有 break则不会退出 switch是継执行下一个case</li>
+</ol>
+<details class="folding-tag" ><summary> 例：今天星期几？ </summary>
+              <div class='content'>
+              <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d=<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getDay</span>(); </span><br><span class="line"><span class="keyword">switch</span> (d) </span><br><span class="line">&#123; </span><br><span class="line">  <span class="keyword">case</span> <span class="number">0</span>:x=<span class="string">&quot;今天是星期日&quot;</span>; </span><br><span class="line">  <span class="keyword">break</span>; </span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>:x=<span class="string">&quot;今天是星期一&quot;</span>; </span><br><span class="line">  <span class="keyword">break</span>; </span><br><span class="line">  <span class="keyword">case</span> <span class="number">2</span>:x=<span class="string">&quot;今天是星期二&quot;</span>; </span><br><span class="line">  <span class="keyword">break</span>; </span><br><span class="line">  <span class="keyword">case</span> <span class="number">3</span>:x=<span class="string">&quot;今天是星期三&quot;</span>; </span><br><span class="line">  <span class="keyword">break</span>; </span><br><span class="line">  <span class="keyword">case</span> <span class="number">4</span>:x=<span class="string">&quot;今天是星期四&quot;</span>; </span><br><span class="line">  <span class="keyword">break</span>; </span><br><span class="line">  <span class="keyword">case</span> <span class="number">5</span>:x=<span class="string">&quot;今天是星期五&quot;</span>; </span><br><span class="line">  <span class="keyword">break</span>; </span><br><span class="line">  <span class="keyword">case</span> <span class="number">6</span>:x=<span class="string">&quot;今天是星期六&quot;</span>; </span><br><span class="line">  <span class="keyword">break</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
+
+<details class="folding-tag" ><summary> 例：default 关键词 </summary>
+              <div class='content'>
+              <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d=<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getDay</span>();</span><br><span class="line"><span class="keyword">switch</span> (d)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span>:x=<span class="string">&quot;今天是星期六&quot;</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span>:x=<span class="string">&quot;今天是星期日&quot;</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">    x=<span class="string">&quot;期待周末&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;demo&quot;</span>).<span class="property">innerHTML</span>=x;</span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/ico/PixPin_2024-09-21_11-47-48.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/ico/PixPin_2024-09-21_11-47-48.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">NGX</div><div class="post-copyright__author_desc">科技之力，创新之源。</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://www.080912.xyz/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://www.080912.xyz/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/')">JavaScript核心基础：深入理解与应用的全面指南</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/about/#about-reward" target="_blank"><img class="post-qr-code-img" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog@main/ico/hb.jpg" alt="领红包"/></a><div class="post-qr-code-desc">领红包</div></li><li class="reward-item"><a href="/about/#about-reward" target="_blank"><img class="post-qr-code-img" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog@main/ico/love.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://www.080912.xyz/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=JavaScript核心基础：深入理解与应用的全面指南&amp;url=https://www.080912.xyz/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/&amp;pic=https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/picx-images-hosting/refs/heads/master/PixPin_2024-10-01_11-48-52.webp" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.080912.xyz" target="_blank">NGX Blog</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>教程<span class="tagsPageCount">13</span></a><a class="post-meta__box__tags" href="/tags/Web%E5%89%8D%E7%AB%AF/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Web前端<span class="tagsPageCount">3</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/26/1/easy-cover_c76afc885386a891999cc8751f0d71b3.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/08/25/Z-Library%E4%BD%BF%E7%94%A8%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8F%E8%AF%A6%E5%B0%BD%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%A8%E9%9D%A2%E8%A7%A3%E9%94%81%E6%B5%B7%E9%87%8F%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E7%AE%A1%E7%90%86/"><img class="prev-cover" src="https://img.080912.xyz/file/b20c53ce9597c42213249.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Z-Library使用全攻略：一站式详尽教程，全面解锁海量电子书资源的获取。</div></div></a></div><div class="next-post pull-right"><a href="/2024/08/27/%E5%88%A9%E7%94%A8GitHubAction%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6RDP/"><img class="next-cover" src="https://img.080912.xyz/file/4e0e2f8a9d0c04b0b518e.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">利用GitHub Action搭建免费临时RDP</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/08/24/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JavaScript%EF%BC%9A%E4%BB%8E%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%88%B0%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%A6%E4%BD%A0%E9%A2%86%E7%95%A5%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%8F%AF%E8%83%BD/" title="深入了解JavaScript：从基础语法到高级应用的全面指南"><img class="cover" src="https://img.080912.xyz/file/e42e514caca66801d748c.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-24</div><div class="title">深入了解JavaScript：从基础语法到高级应用的全面指南</div></div></a></div><div><a href="/2026/01/19/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/" title="Python数据分析基础"><img class="cover" src="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/26/1/easy-cover_c76afc885386a891999cc8751f0d71b3.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-19</div><div class="title">Python数据分析基础</div></div></a></div><div><a href="/2024/08/25/Z-Library%E4%BD%BF%E7%94%A8%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8F%E8%AF%A6%E5%B0%BD%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%A8%E9%9D%A2%E8%A7%A3%E9%94%81%E6%B5%B7%E9%87%8F%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E7%AE%A1%E7%90%86/" title="Z-Library使用全攻略：一站式详尽教程，全面解锁海量电子书资源的获取。"><img class="cover" src="https://img.080912.xyz/file/b20c53ce9597c42213249.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-25</div><div class="title">Z-Library使用全攻略：一站式详尽教程，全面解锁海量电子书资源的获取。</div></div></a></div><div><a href="/2025/09/13/code-server%E4%BA%91%E7%AB%AFVSCode%E9%83%A8%E7%BD%B2/" title="Github开源项目，部署云端VScode"><img class="cover" src="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/25/9/未标题-1_7d5330b8b2dda521d2a64acd5300df9e.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-09-13</div><div class="title">Github开源项目，部署云端VScode</div></div></a></div><div><a href="/2024/08/23/exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" title="全网最详细将java项目打包成exe可执行文件"><img class="cover" src="https://img.080912.xyz/file/92eae4604782d6c5fdbaf.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-23</div><div class="title">全网最详细将java项目打包成exe可执行文件</div></div></a></div><div><a href="/2025/11/29/javaall/" title="Java从入门到实战"><img class="cover" src="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/25/11/cb31e30d59cdeb8a2fe0edf46820f321df23e01c.jpg@672w_378h_1c_ffb3e3b7fba0a1ab44ef69b34456499d.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-11-29</div><div class="title">Java从入门到实战</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/ico/PixPin_2024-09-21_11-47-48.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">欢迎来到我们的博客，这里汇聚了<b style="color:#fff">AI、前端开发、技术</b>等行业的见解与经验，还有高质量的<b style="color:#fff">文章翻译</b>和<b style="color:#fff">资源分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">在这里，你可以发现丰富的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>，助力你的学习与职业发展。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">NGX</h1><div class="author-info__desc">科技之力，创新之源。</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/ningguoxu" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1831345748" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%A7%E7%BB%AD"><span class="toc-number">1.</span> <span class="toc-text">继续</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-%E7%94%A8%E6%88%B7%E8%AE%A2%E5%8D%95%E4%BF%A1%E6%81%AF"><span class="toc-number">2.</span> <span class="toc-text">案例: 用户订单信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99HTML%E5%92%8CCSS"><span class="toc-number">2.1.</span> <span class="toc-text">编写HTML和CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99JavaScript"><span class="toc-number">2.2.</span> <span class="toc-text">编写JavaScript</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.1.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.2.</span> <span class="toc-text">自增运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.3.</span> <span class="toc-text">比较运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.3.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">3.3.2.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94"><span class="toc-number">3.3.3.</span> <span class="toc-text">对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.4.</span> <span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">3.5.</span> <span class="toc-text">优先级</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.</span> <span class="toc-text">分支语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.1.</span> <span class="toc-text">if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">4.2.</span> <span class="toc-text">三元运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.3.</span> <span class="toc-text">switch语句</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/01/19/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/" title="Python数据分析基础"><img src="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/26/1/easy-cover_c76afc885386a891999cc8751f0d71b3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python数据分析基础"/></a><div class="content"><a class="title" href="/2026/01/19/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/" title="Python数据分析基础">Python数据分析基础</a><time datetime="2026-01-19T02:28:55.735Z" title="发表于 2026-01-19 02:28:55">2026-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/29/javaall/" title="Java从入门到实战"><img src="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/25/11/cb31e30d59cdeb8a2fe0edf46820f321df23e01c.jpg@672w_378h_1c_ffb3e3b7fba0a1ab44ef69b34456499d.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java从入门到实战"/></a><div class="content"><a class="title" href="/2025/11/29/javaall/" title="Java从入门到实战">Java从入门到实战</a><time datetime="2025-11-29T04:14:09.490Z" title="发表于 2025-11-29 04:14:09">2025-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/13/code-server%E4%BA%91%E7%AB%AFVSCode%E9%83%A8%E7%BD%B2/" title="Github开源项目，部署云端VScode"><img src="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/25/9/未标题-1_7d5330b8b2dda521d2a64acd5300df9e.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Github开源项目，部署云端VScode"/></a><div class="content"><a class="title" href="/2025/09/13/code-server%E4%BA%91%E7%AB%AFVSCode%E9%83%A8%E7%BD%B2/" title="Github开源项目，部署云端VScode">Github开源项目，部署云端VScode</a><time datetime="2025-09-13T00:19:51.334Z" title="发表于 2025-09-13 00:19:51">2025-09-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/01/n8n%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E9%83%A8%E7%BD%B2/" title="使用免费云容器部署n8n工作流"><img src="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/25/9/未标题-1_3620a97ec32aef373f33e7de3638110d.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用免费云容器部署n8n工作流"/></a><div class="content"><a class="title" href="/2025/09/01/n8n%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E9%83%A8%E7%BD%B2/" title="使用免费云容器部署n8n工作流">使用免费云容器部署n8n工作流</a><time datetime="2025-09-01T02:59:01.804Z" title="发表于 2025-09-01 02:59:01">2025-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/19/%E5%B8%81%E5%9C%88%E5%9F%BA%E7%A1%80%EF%BC%9A%E8%AE%A4%E8%AF%86K%E7%BA%BF%EF%BC%8C%E8%AF%86%E5%88%ABK%E7%BA%BF/" title="加密货币新手入门实操指南"><img src="https://gcore.jsdelivr.net/gh/ngxblog/picx-images-hosting@master/25/8/2025-08-22-16-14-55_cd4a02a2422e05aebbdfe56fe2f356b8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="加密货币新手入门实操指南"/></a><div class="content"><a class="title" href="/2025/08/19/%E5%B8%81%E5%9C%88%E5%9F%BA%E7%A1%80%EF%BC%9A%E8%AE%A4%E8%AF%86K%E7%BA%BF%EF%BC%8C%E8%AF%86%E5%88%ABK%E7%BA%BF/" title="加密货币新手入门实操指南">加密货币新手入门实操指南</a><time datetime="2025-08-19T04:21:04.148Z" title="发表于 2025-08-19 04:21:04">2025-08-19</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 - 2026 By <a class="footer-bar-link" href="/" title="NGX" target="_blank">NGX</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20240478" title="萌ICP备-20240478号">萌ICP备-20240478号</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">10</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://stats.uptimerobot.com/AIytbzsz8M" title="Status"><img class="back-menu-item-icon" src="https://stats.uptimerobot.com/assets/favicon.ico" alt="Status"/><span class="back-menu-item-text">Status</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://qexo.080912.xyz" title="Qexo"><img class="back-menu-item-icon" src="https://unpkg.com/qexo-static@3.0.5/qexo/images/icon.png" alt="Qexo"/><span class="back-menu-item-text">Qexo</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ningguoxu.github.io/" title="备用链接"><img class="back-menu-item-icon" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/icon.png" alt="备用链接"/><span class="back-menu-item-text">备用链接</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://qlngx.zeabur.app/" title="青龙"><img class="back-menu-item-icon" src="https://qn.whyour.cn/logo.png" alt="青龙"/><span class="back-menu-item-text">青龙</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/comments/"><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>4</sup></a><a href="/tags/ChatGPT/" style="font-size: 0.88rem;">ChatGPT<sup>5</sup></a><a href="/tags/Github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 0.88rem;">Github开源项目<sup>3</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>1</sup></a><a href="/tags/Java/" style="font-size: 0.88rem;">Java<sup>2</sup></a><a href="/tags/OpenAI/" style="font-size: 0.88rem;">OpenAI<sup>3</sup></a><a href="/tags/PhotoShop/" style="font-size: 0.88rem;">PhotoShop<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>1</sup></a><a href="/tags/Web%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">Web前端<sup>3</sup></a><a href="/tags/Windows/" style="font-size: 0.88rem;">Windows<sup>3</sup></a><a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.88rem;">云服务器<sup>6</sup></a><a href="/tags/%E4%BA%91%E7%94%B5%E8%84%91/" style="font-size: 0.88rem;">云电脑<sup>2</sup></a><a href="/tags/%E5%89%8D%E6%B2%BF%E5%BF%AB%E8%AE%AF/" style="font-size: 0.88rem;">前沿快讯<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 0.88rem;">图床<sup>2</sup></a><a href="/tags/%E5%B8%81%E5%9C%88/" style="font-size: 0.88rem;">币圈<sup>1</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 0.88rem;">建站<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>12</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">教程<sup>11</sup></a><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" style="font-size: 0.88rem;">浏览器插件<sup>1</sup></a><a href="/tags/%E7%A7%91%E6%8A%80/" style="font-size: 0.88rem;">科技<sup>5</sup></a><a href="/tags/%E7%BB%8F%E6%B5%8E/" style="font-size: 0.88rem;">经济<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.88rem;">网络安全<sup>1</sup></a><a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 0.88rem;">羊毛<sup>6</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 0.88rem;">脚本<sup>1</sup></a><a href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80/" style="font-size: 0.88rem;">黑科技<sup>5</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"><a class="tag-list" href="/tags/%E6%95%99%E7%A8%8B" title="教程">教程</a><a class="tag-list" href="/tags/%E6%8A%80%E6%9C%AF" title="技术">技术</a><a class="tag-list" href="/tags/%E7%A7%91%E6%8A%80" title="科技">科技</a><a class="tag-list" href="/tags/AI" title="AI">AI</a><a class="tag-list" href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80" title="黑科技">黑科技</a></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/7819612764&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script async src="/anzhiyu/random.js"></script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

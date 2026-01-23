@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'LXGWWenKaiScreen';
+  font-display: swap;
+  src: url('./LXGWWenKaiScreen.woff2') format('woff2'),
+       url('./LXGWWenKaiScreen.ttf') format('truetype');
+}
+
+body{
+  font-size: 17px;
+}
+
