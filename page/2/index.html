@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>NGX Blog - 科技之力，创新之源。</title><meta name="keywords" content="技术, AI, 前端, 新时代, 自媒体"><meta name="author" content="NGX"><meta name="copyright" content="NGX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="NGX Blog"><meta name="application-name" content="NGX Blog"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="website"><meta property="og:title" content="NGX Blog"><meta property="og:url" content="https://www.080912.xyz/page/2/index.html"><meta property="og:site_name" content="NGX Blog"><meta property="og:description" content="这是一个提供技术, AI, 前端, 新时代, 自媒体的个人博客平台，欢迎访问~"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/ico/PixPin_2024-09-21_11-47-48.webp"><meta property="article:author" content="NGX"><meta property="article:tag" content="技术, AI, 前端, 新时代, 自媒体"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/ico/PixPin_2024-09-21_11-47-48.webp"><meta name="description" content="这是一个提供技术, AI, 前端, 新时代, 自媒体的个人博客平台，欢迎访问~"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/icon.png"><link rel="canonical" href="https://www.080912.xyz/page/2/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: {"mode":"api","api":"https://color.080912.xyz/api?img=","cover_change":true},
+  authorStatus: {"skills":["👨‍💻 代码世界的建筑师","🚀 程序逻辑的探索者","💡 科技创新的先驱者","🌐 网络空间的航海家","🔧 工具与效率的追求者","🔒 安全与隐私的守护者","🎨 数字艺术的创作者","📚 知识海洋的探险者"]},
+  algolia: {"appId":"EYR6K6WXB7","apiKey":"d44d2d146e8e9d34427c7f4bc4aba97f","indexName":"hexo","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":100,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: NGX","link":"链接: ","source":"来源: NGX Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'NGX Blog',
+  title: 'NGX Blog',
+  postAI: '',
+  pageFillDescription: '这是一个提供技术前端新时代自媒体的个人博客平台欢迎访问',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2026-03-21 04:22:57',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/ico/PixPin_2024-09-21_11-47-48.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://stats.uptimerobot.com/AIytbzsz8M" title="Status"><img class="back-menu-item-icon" src="https://stats.uptimerobot.com/assets/favicon.ico" alt="Status"/><span class="back-menu-item-text">Status</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://qexo.080912.xyz" title="Qexo"><img class="back-menu-item-icon" src="https://unpkg.com/qexo-static@3.0.5/qexo/images/icon.png" alt="Qexo"/><span class="back-menu-item-text">Qexo</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ningguoxu.github.io/" title="备用链接"><img class="back-menu-item-icon" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/icon.png" alt="备用链接"/><span class="back-menu-item-text">备用链接</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://qlngx.zeabur.app/" title="青龙"><img class="back-menu-item-icon" src="https://qn.whyour.cn/logo.png" alt="青龙"/><span class="back-menu-item-text">青龙</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">NGX Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/comments/"><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/about/#about-reward" target="_blank"><img class="post-qr-code-img" alt="领红包" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog@main/ico/hb.jpg"/></a><div class="post-qr-code-desc">领红包</div></li><li class="reward-item"><a href="/about/#about-reward" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog@main/ico/love.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>5</sup></a><a href="/tags/ChatGPT/" style="font-size: 1.05rem;">ChatGPT<sup>5</sup></a><a href="/tags/Github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 1.05rem;">Github开源项目<sup>3</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.05rem;">Java<sup>2</sup></a><a href="/tags/OpenAI/" style="font-size: 1.05rem;">OpenAI<sup>3</sup></a><a href="/tags/PhotoShop/" style="font-size: 1.05rem;">PhotoShop<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/Web%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">Web前端<sup>3</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>3</sup></a><a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.05rem;">云服务器<sup>6</sup></a><a href="/tags/%E4%BA%91%E7%94%B5%E8%84%91/" style="font-size: 1.05rem;">云电脑<sup>2</sup></a><a href="/tags/%E5%89%8D%E6%B2%BF%E5%BF%AB%E8%AE%AF/" style="font-size: 1.05rem;">前沿快讯<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.05rem;">图床<sup>2</sup></a><a href="/tags/%E5%B8%81%E5%9C%88/" style="font-size: 1.05rem;">币圈<sup>1</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 1.05rem;">建站<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>12</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>12</sup></a><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" style="font-size: 1.05rem;">浏览器插件<sup>1</sup></a><a href="/tags/%E7%A7%91%E6%8A%80/" style="font-size: 1.05rem;">科技<sup>5</sup></a><a href="/tags/%E7%BB%8F%E6%B5%8E/" style="font-size: 1.05rem;">经济<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.05rem;">网络安全<sup>1</sup></a><a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 1.05rem;">羊毛<sup>6</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 1.05rem;">脚本<sup>1</sup></a><a href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80/" style="font-size: 1.05rem;">黑科技<sup>5</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/09/"><span class="card-archive-list-date">九月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="bbTimeList container" id="bbTimeList"><i class="anzhiyufont anzhiyu-icon-jike bber-logo fontbold" onclick="pjax.loadUrl(&quot;/essay/&quot;);" title="即刻短文" href="javascript:void(0);" aria-hidden="true"></i><div class="swiper-container swiper-no-swiping essay_bar_swiper_container" id="bbtalk" tabindex="-1"><div class="swiper-wrapper" id="bber-talk" onclick="pjax.loadUrl(&quot;/essay/&quot;);"><a class="li-style swiper-slide" href="javascript:void(0);">欢迎来看我的博客</a><a class="li-style swiper-slide" href="javascript:void(0);">图片访问较慢请等待</a></div></div><a class="bber-gotobb anzhiyufont anzhiyu-icon-circle-arrow-right" onclick="pjax.loadUrl(&quot;/essay/&quot;);" href="javascript:void(0);" title="查看全文"></a></div><script src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js"></script><div class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div id="categoryBar"><div class="category-bar" id="category-bar"><div id="catalog-bar"><div id="catalog-list"><div class="catalog-list-item" id="首页"><a href="/">首页</a></div>
+    <div class="catalog-list-item" id="/categories/AI人工智能/">
+      <a href="/categories/AI人工智能/">
+        AI人工智能
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/网站相关/">
+      <a href="/categories/网站相关/">
+        网站相关
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/网页开发/">
+      <a href="/categories/网页开发/">
+        网页开发
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/黑科技/">
+      <a href="/categories/黑科技/">
+        黑科技
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/Python实战应用/">
+      <a href="/categories/Python实战应用/">
+        Python实战应用
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/Java程序设计/">
+      <a href="/categories/Java程序设计/">
+        Java程序设计
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/云服务器-云电脑/">
+      <a href="/categories/云服务器-云电脑/">
+        云服务器&云电脑
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/金融理财/">
+      <a href="/categories/金融理财/">
+        金融理财
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/网络安全/">
+      <a href="/categories/网络安全/">
+        网络安全
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/配置调优/">
+      <a href="/categories/配置调优/">
+        配置调优
+      </a>
+    </div>
+    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2024/10/08/PhotoShop%E6%9C%80%E6%96%B0AI%E6%8F%92%E4%BB%B6%EF%BC%8C%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96%E7%89%88%EF%BC%8C%E6%97%A0%E9%99%90%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E3%80%82/')"><div class="post_cover left"><a href="/2024/10/08/PhotoShop%E6%9C%80%E6%96%B0AI%E6%8F%92%E4%BB%B6%EF%BC%8C%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96%E7%89%88%EF%BC%8C%E6%97%A0%E9%99%90%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E3%80%82/" title="PhotoShop最新AI插件，支持中文汉化版，无限免费使用。" style="display: flex;height: 100%;"><img class="post_bg" src="https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/vite-blog-theme/refs/heads/main/PixPin_2024-10-08_18-57-11.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PhotoShop最新AI插件，支持中文汉化版，无限免费使用。" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">黑科技</div><a class="unvisited-post" href="/2024/10/08/PhotoShop%E6%9C%80%E6%96%B0AI%E6%8F%92%E4%BB%B6%EF%BC%8C%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96%E7%89%88%EF%BC%8C%E6%97%A0%E9%99%90%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E3%80%82/" title="PhotoShop最新AI插件，支持中文汉化版，无限免费使用。">未读</a></div><a class="article-title" href="/2024/10/08/PhotoShop%E6%9C%80%E6%96%B0AI%E6%8F%92%E4%BB%B6%EF%BC%8C%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96%E7%89%88%EF%BC%8C%E6%97%A0%E9%99%90%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E3%80%82/" title="PhotoShop最新AI插件，支持中文汉化版，无限免费使用。">PhotoShop最新AI插件，支持中文汉化版，无限免费使用。</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-08T18:23:51.000Z" title="发表于 2024-10-08 18:23:51" time="2024-10-08 18:23:51">2024-10-08</time><time class="time_hidden" datetime="2026-03-21T04:22:34.422Z" title="更新于 2026-03-21 04:22:34" time="2026-03-21 04:22:34">2026-03-21</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/PhotoShop/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>PhotoShop</span></a><a class="article-meta__tags" href="/tags/%E7%BE%8A%E6%AF%9B/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>羊毛</span></a></span></div><div class="content">
+在设计领域，人工智能技术的迅速发展为创作者们带来了前所未有的便利。尤其是 PhotoShop 作为图像处理软件的佼佼者，不断推陈出新，以适应日益复杂的设计需求。最新推出的 PhotoShop AI 插件不仅具备强大的图像处理和优化能力，而且支持中文汉化界面，让国内用户能够更便捷地使用。这款插件最大的亮点在于其“无限免费使用”功能，彻底消除了用户的经济负担，无论是专业设计师还是业余爱好者都能尽情发挥创意，轻松高效地完成各类设计任务。本文将为您详细介绍这款插件的功能及优势，并探讨其如何帮助您在日常设计工作中事半功倍。
+
+PS AI2023年，Adobe推出具有AI功能的PhotoShop（24.6.0.2185）测试版。有两项AI功能
+
+生成式扩展: 可以基于画布扩展智能生成图像或影象。
+创成式填充: 可以基于输入文本进行图像生成，并与当前图像内容吻合。
+
+将AI功能添加到PhotoShop中，极大地方便了设计师操作，降低了PhotoShop使用门槛，即使新用户也能很好的使用。效率迅速提升。但是，如果想使用AI功能，需要有账户，购买PhotoShop正版，且中国大陆境内无法使用。基于这些 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/09/08/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E5%9B%BD%E5%A4%96%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%A4%96%E9%93%BE%E7%BD%91%E7%9B%98/')"><div class="post_cover left"><a href="/2024/09/08/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E5%9B%BD%E5%A4%96%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%A4%96%E9%93%BE%E7%BD%91%E7%9B%98/" title="推荐几个国内外稳定的外链网盘" style="display: flex;height: 100%;"><img class="post_bg" src="https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/Hexo-Blog/main/bidqv/%E7%94%BB%E6%9D%BF%201jpg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="推荐几个国内外稳定的外链网盘" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">黑科技</div><a class="unvisited-post" href="/2024/09/08/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E5%9B%BD%E5%A4%96%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%A4%96%E9%93%BE%E7%BD%91%E7%9B%98/" title="推荐几个国内外稳定的外链网盘">未读</a></div><a class="article-title" href="/2024/09/08/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E5%9B%BD%E5%A4%96%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%A4%96%E9%93%BE%E7%BD%91%E7%9B%98/" title="推荐几个国内外稳定的外链网盘">推荐几个国内外稳定的外链网盘</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-08T10:18:59.000Z" title="发表于 2024-09-08 10:18:59" time="2024-09-08 10:18:59">2024-09-08</time><time class="time_hidden" datetime="2026-03-21T04:22:34.422Z" title="更新于 2026-03-21 04:22:34" time="2026-03-21 04:22:34">2026-03-21</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%BE%8A%E6%AF%9B/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>羊毛</span></a><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>技术</span></a><a class="article-meta__tags" href="/tags/%E5%9B%BE%E5%BA%8A/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>图床</span></a></span></div><div class="content">Open Drive
+    引用站外地址
+    
+        
+          
+        
+        
+            OpenDrive
+             OpenDrive
+        
+        
+    
+    
+
+注册送5GB，每天1G带宽，支持图片外链，可用作图床。
+
+网盘直链格式：https://web.opendrive.com/api/v1/download/file.json/MjlfNDM3ODYxNzlfOTI5WnU?session_id=4c16ad4846dd07ceaa0a6aac8e8a64e6c10f75a3ba694b4e483f327de53d65d7&amp;inline=1&amp;preview=1
+国内测速
+
+酷族网软
+    引用站外地址
+    
+        
+          
+        
+        
+            酷族网软
+             酷族网软
+        
+        
+    
+    
+
+免费20GB，可用作图床，有直链。 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/09/07/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%85%A8%E7%9A%84%20Serverless%20%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8E%E4%BA%86/')"><div class="post_cover left"><a href="/2024/09/07/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%85%A8%E7%9A%84%20Serverless%20%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8E%E4%BA%86/" title="这可能是最全的 Serverless 平台的使用说明了" style="display: flex;height: 100%;"><img class="post_bg" src="https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/picx-images-hosting/refs/heads/master/PixPin_2024-10-03_11-18-24.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这可能是最全的 Serverless 平台的使用说明了" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">云服务器&amp;云电脑</div><a class="unvisited-post" href="/2024/09/07/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%85%A8%E7%9A%84%20Serverless%20%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8E%E4%BA%86/" title="这可能是最全的 Serverless 平台的使用说明了">未读</a></div><a class="article-title" href="/2024/09/07/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%85%A8%E7%9A%84%20Serverless%20%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8E%E4%BA%86/" title="这可能是最全的 Serverless 平台的使用说明了">这可能是最全的 Serverless 平台的使用说明了</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-07T00:10:57.000Z" title="发表于 2024-09-07 00:10:57" time="2024-09-07 00:10:57">2024-09-07</time><time class="time_hidden" datetime="2026-01-02T08:53:38.052Z" title="更新于 2026-01-02 08:53:38" time="2026-01-02 08:53:38">2026-01-02</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Web%E5%89%8D%E7%AB%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Web前端</span></a><a class="article-meta__tags" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>云服务器</span></a><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>技术</span></a></span></div><div class="content">
+无服务器运算（英语：Serverless computing），又被称为功能即服务（Function-as-a-Service，缩写为 FaaS），是云计算的一种模型。以平台即服务（PaaS）为基础，无服务器运算提供一个微型的架构，终端客户不需要部署、配置或管理服务器服务，代码运行所需要的服务器服务皆由云端平台来提供。
+
+国内服务腾讯云
+    引用站外地址
+    
+        
+          
+        
+        
+            Serverless 应用中心-腾讯云
+             腾讯云
+        
+        
+    
+    
+
+
+虽然方便，但是仅支持按量计费环境——也就是说，一键部署的环境，当免费资源用尽后，将会产生费用。且按量计费环境无法切换为包年包月环境。免费额度数据库读操作数只有 500 次 &#x2F; 天。并且需要实名。
+百度云
+    引用站外地址
+    
+        
+          
+        
+        
+            函数计算CFC_无服务器计算-百度智能云
+   ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/29/Dall-E3%E7%8E%B0%E5%9C%A8%E7%AB%9F%E7%84%B6%E5%85%8D%E8%B4%B9%E2%80%94%E2%80%94AI%E7%BB%98%E5%9B%BE%E5%BA%94%E7%94%A8%E6%8E%A8%E8%8D%90/')"><div class="post_cover left"><a href="/2024/08/29/Dall-E3%E7%8E%B0%E5%9C%A8%E7%AB%9F%E7%84%B6%E5%85%8D%E8%B4%B9%E2%80%94%E2%80%94AI%E7%BB%98%E5%9B%BE%E5%BA%94%E7%94%A8%E6%8E%A8%E8%8D%90/" title="Dall-E3现在竟然免费——AI绘图应用推荐" style="display: flex;height: 100%;"><img class="post_bg" src="https://img.080912.xyz/file/a4fa06df7e867fbba42b3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Dall-E3现在竟然免费——AI绘图应用推荐" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">AI人工智能</div><a class="unvisited-post" href="/2024/08/29/Dall-E3%E7%8E%B0%E5%9C%A8%E7%AB%9F%E7%84%B6%E5%85%8D%E8%B4%B9%E2%80%94%E2%80%94AI%E7%BB%98%E5%9B%BE%E5%BA%94%E7%94%A8%E6%8E%A8%E8%8D%90/" title="Dall-E3现在竟然免费——AI绘图应用推荐">未读</a></div><a class="article-title" href="/2024/08/29/Dall-E3%E7%8E%B0%E5%9C%A8%E7%AB%9F%E7%84%B6%E5%85%8D%E8%B4%B9%E2%80%94%E2%80%94AI%E7%BB%98%E5%9B%BE%E5%BA%94%E7%94%A8%E6%8E%A8%E8%8D%90/" title="Dall-E3现在竟然免费——AI绘图应用推荐">Dall-E3现在竟然免费——AI绘图应用推荐</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-29T03:14:18.000Z" title="发表于 2024-08-29 03:14:18" time="2024-08-29 03:14:18">2024-08-29</time><time class="time_hidden" datetime="2026-03-15T02:48:42.700Z" title="更新于 2026-03-15 02:48:42" time="2026-03-15 02:48:42">2026-03-15</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/ChatGPT/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ChatGPT</span></a><a class="article-meta__tags" href="/tags/AI/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI</span></a><a class="article-meta__tags" href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>黑科技</span></a></span></div><div class="content">
+OpenAI公司发布了Dall—E3模型；该模型与GPT模型不一样，该模型用于生成图像。该模型可以说是AI绘图中数一数二的工具了。
+
+Dall-E3Dell—E 3模型与上一代相比有着非常大的进步。最大的进步是DALL-E 3在生成图像中的文本，如标签、标志、徽标或者标题等方面有了显著的提升。此外安全性也有了提高，增加了一些防止生成成人、暴力或者仇恨图像的机制。分辨率已提升到1024x1024，图像会更加清晰。
+官网
+    引用站外地址
+    
+        
+          
+        
+        
+            DALL·E 3
+             OpenAI
+        
+        
+    
+    
+
+
+官网定价Dall-E 3和GPT-4是连在一起的。想使用Dall-E 3就要先开通GPT-4的使用权限。即Plus或Team计划。
+产品定价如下：
+
+即使是调用api，最低也是$0.04元。
+
+但这是官方的定价，还有一些网站或服务也提供Dall-E 3模型调用，有些甚至免费。
+Microsoft Copilot（NewBin ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/27/%E5%88%A9%E7%94%A8GitHubAction%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6RDP/')"><div class="post_cover left"><a href="/2024/08/27/%E5%88%A9%E7%94%A8GitHubAction%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6RDP/" title="利用GitHub Action搭建免费临时RDP" style="display: flex;height: 100%;"><img class="post_bg" src="https://img.080912.xyz/file/4e0e2f8a9d0c04b0b518e.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用GitHub Action搭建免费临时RDP" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">云服务器&amp;云电脑</div><a class="unvisited-post" href="/2024/08/27/%E5%88%A9%E7%94%A8GitHubAction%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6RDP/" title="利用GitHub Action搭建免费临时RDP">未读</a></div><a class="article-title" href="/2024/08/27/%E5%88%A9%E7%94%A8GitHubAction%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6RDP/" title="利用GitHub Action搭建免费临时RDP">利用GitHub Action搭建免费临时RDP</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-27T08:18:34.000Z" title="发表于 2024-08-27 08:18:34" time="2024-08-27 08:18:34">2024-08-27</time><time class="time_hidden" datetime="2026-03-21T04:22:34.422Z" title="更新于 2026-03-21 04:22:34" time="2026-03-21 04:22:34">2026-03-21</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>云服务器</span></a><a class="article-meta__tags" href="/tags/%E7%A7%91%E6%8A%80/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>科技</span></a><a class="article-meta__tags" href="/tags/%E4%BA%91%E7%94%B5%E8%84%91/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>云电脑</span></a></span></div><div class="content">
+😀 在现代软件开发和运维中，自动化工具的使用变得越来越普遍和重要。GitHub Actions 作为一种强大的持续集成和持续部署（CI&#x2F;CD）工具，极大地简化了开发者的工作流程。在这个项目中，我们将探讨如何利用 GitHub Actions 创建临时远程桌面协议（RDP）连接，以便进行测试和教育用途。
+
+
+免责声明：
+本项目使用 GitHub Actions 创建临时远程桌面协议（RDP）连接。请注意以下事项：
+
+仅供测试和教育用途：本项目仅供测试和教育用途，不得用于任何非法或未经授权的活动。用户应确保其行为符合相关法律法规。
+安全性和隐私：使用临时 RDP 连接可能存在安全风险。请勿在连接中传输敏感或机密信息。用户应采取必要的安全措施保护其数据和隐私。
+责任限制：本项目的开发者不对因使用本项目而导致的任何直接或间接损失、损害或责任承担任何责任。用户应自行承担使用本项目的风险。
+第三方服务：本项目可能依赖于第三方服务（如 GitHub 和 Microsoft Azure）。用户应遵守这些服务的使用条款和政策。
+项目变更：本项目可能会随时进行更改或更新，恕不另行通知。用户应 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/')"><div class="post_cover left"><a href="/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/" title="JavaScript核心基础：深入理解与应用的全面指南" style="display: flex;height: 100%;"><img class="post_bg" src="https://webp.080912.xyz/Usedonlyasapictureacceleration/https/raw.githubusercontent.com/ngxblog/picx-images-hosting/refs/heads/master/PixPin_2024-10-01_11-48-52.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript核心基础：深入理解与应用的全面指南" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">网页开发</div><a class="unvisited-post" href="/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/" title="JavaScript核心基础：深入理解与应用的全面指南">未读</a></div><a class="article-title" href="/2024/08/27/JavaScript%E6%A0%B8%E5%BF%83%E5%9F%BA%E7%A1%80%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%B8%8E%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/" title="JavaScript核心基础：深入理解与应用的全面指南">JavaScript核心基础：深入理解与应用的全面指南</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-27T03:17:05.000Z" title="发表于 2024-08-27 03:17:05" time="2024-08-27 03:17:05">2024-08-27</time><time class="time_hidden" datetime="2025-08-29T07:53:43.065Z" title="更新于 2025-08-29 07:53:43" time="2025-08-29 07:53:43">2025-08-29</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a><a class="article-meta__tags" href="/tags/Web%E5%89%8D%E7%AB%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Web前端</span></a></span></div><div class="content">继续本文章是 深入了解JavaScript：从基础语法到高级应用的全面指南 的接续。先看这篇文章有助于理解哦。
+
+    引用站外地址
+    
+        
+          
+        
+        
+            深入了解JavaScript：从基础语法到高级应用的全面指南
+             NGX Blog
+        
+        
+    
+    
+
+案例: 用户订单信息编写HTML和CSSHTML部分
+1234567891011121314&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;Document&lt;/title&gt;    ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/25/Z-Library%E4%BD%BF%E7%94%A8%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8F%E8%AF%A6%E5%B0%BD%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%A8%E9%9D%A2%E8%A7%A3%E9%94%81%E6%B5%B7%E9%87%8F%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E7%AE%A1%E7%90%86/')"><div class="post_cover left"><a href="/2024/08/25/Z-Library%E4%BD%BF%E7%94%A8%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8F%E8%AF%A6%E5%B0%BD%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%A8%E9%9D%A2%E8%A7%A3%E9%94%81%E6%B5%B7%E9%87%8F%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E7%AE%A1%E7%90%86/" title="Z-Library使用全攻略：一站式详尽教程，全面解锁海量电子书资源的获取。" style="display: flex;height: 100%;"><img class="post_bg" src="https://img.080912.xyz/file/b20c53ce9597c42213249.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Z-Library使用全攻略：一站式详尽教程，全面解锁海量电子书资源的获取。" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">网站相关</div><a class="unvisited-post" href="/2024/08/25/Z-Library%E4%BD%BF%E7%94%A8%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8F%E8%AF%A6%E5%B0%BD%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%A8%E9%9D%A2%E8%A7%A3%E9%94%81%E6%B5%B7%E9%87%8F%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E7%AE%A1%E7%90%86/" title="Z-Library使用全攻略：一站式详尽教程，全面解锁海量电子书资源的获取。">未读</a></div><a class="article-title" href="/2024/08/25/Z-Library%E4%BD%BF%E7%94%A8%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8F%E8%AF%A6%E5%B0%BD%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%A8%E9%9D%A2%E8%A7%A3%E9%94%81%E6%B5%B7%E9%87%8F%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E7%AE%A1%E7%90%86/" title="Z-Library使用全攻略：一站式详尽教程，全面解锁海量电子书资源的获取。">Z-Library使用全攻略：一站式详尽教程，全面解锁海量电子书资源的获取。</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-25T10:46:38.000Z" title="发表于 2024-08-25 10:46:38" time="2024-08-25 10:46:38">2024-08-25</time><time class="time_hidden" datetime="2026-03-21T04:22:34.422Z" title="更新于 2026-03-21 04:22:34" time="2026-03-21 04:22:34">2026-03-21</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>黑科技</span></a><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a></span></div><div class="content">
+😀 在这个信息爆炸的时代，知识和信息的获取变得尤为重要。Z-Library作为全球最大的数字图书馆之一，以其庞大的电子书资源和便捷的访问方式，受到了广大学术研究者、学生以及阅读爱好者的青睐。然而，面对如此丰富的资源，如何高效地获取、管理和利用这些电子书成为了许多用户的一大挑战。
+
+Z-Library是什么Z-Library（简称Z-Lib，前身为BookFinder）是一个影子图书馆和开放获取文件分享计划，用户可在此一网站上下载期刊文章以及各种类型的书籍。
+Z-Library容许用户自行上传书籍，并设立了捐款渠道予人捐款。在网站上用户可免费下载书籍和期刊。用户不经注册也可下载资源，但注册后下载次数和速度会有所提升，在捐款后还享有更多的功能。
+Z-Library如何访问官方网站
+    引用站外地址
+    
+        
+          
+        
+        
+            Z-Library – the world’s largest e-book library. Your gateway to knowledge and culture.
+   ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/24/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JavaScript%EF%BC%9A%E4%BB%8E%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%88%B0%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%A6%E4%BD%A0%E9%A2%86%E7%95%A5%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%8F%AF%E8%83%BD/')"><div class="post_cover left"><a href="/2024/08/24/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JavaScript%EF%BC%9A%E4%BB%8E%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%88%B0%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%A6%E4%BD%A0%E9%A2%86%E7%95%A5%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%8F%AF%E8%83%BD/" title="深入了解JavaScript：从基础语法到高级应用的全面指南" style="display: flex;height: 100%;"><img class="post_bg" src="https://img.080912.xyz/file/e42e514caca66801d748c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深入了解JavaScript：从基础语法到高级应用的全面指南" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">网页开发</div><a class="unvisited-post" href="/2024/08/24/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JavaScript%EF%BC%9A%E4%BB%8E%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%88%B0%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%A6%E4%BD%A0%E9%A2%86%E7%95%A5%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%8F%AF%E8%83%BD/" title="深入了解JavaScript：从基础语法到高级应用的全面指南">未读</a></div><a class="article-title" href="/2024/08/24/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3JavaScript%EF%BC%9A%E4%BB%8E%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%88%B0%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%A6%E4%BD%A0%E9%A2%86%E7%95%A5%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%8F%AF%E8%83%BD/" title="深入了解JavaScript：从基础语法到高级应用的全面指南">深入了解JavaScript：从基础语法到高级应用的全面指南</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-24T03:32:28.000Z" title="发表于 2024-08-24 03:32:28" time="2024-08-24 03:32:28">2024-08-24</time><time class="time_hidden" datetime="2025-10-06T01:22:36.592Z" title="更新于 2025-10-06 01:22:36" time="2025-10-06 01:22:36">2025-10-06</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a><a class="article-meta__tags" href="/tags/Web%E5%89%8D%E7%AB%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Web前端</span></a></span></div><div class="content">准备工作安装VSCode
+    引用站外地址
+    
+        
+          
+        
+        
+            Visual Studio Code - Code Editing. Redefined
+             Visual Studio Code - Code Editing. Redefined
+        
+        
+    
+    
+
+一个轻量级代码编辑器
+
+安装扩展Live ServerVSCode直接搜索安装即可，注意不要安装错了
+
+这是一个自动刷新页面的工具
+开放后浏览器输入 127.0.0.1:5500 就可以看到你的网页了。
+Error Lens
+这是一款代码优化工具。
+
+安装主题（可选）非常经典且好看的一款主题, 非常适合编写网页.
+
+
+链接JS内联 JavaScript你可以直接在 HTML 文件中使用 &lt;script&gt; 标签编写 JavaScript 代码。代码会嵌入到 HTML 文件中。
+123456789101112&lt;!DOCTYPE html&gt;&lt;htm ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/24/OpenAI%E6%9C%80%E6%96%B0%E7%9A%84Sora%E6%A8%A1%E5%9E%8B%E7%AB%9F%E7%84%B6%E8%A2%AB%E5%90%8A%E6%89%93%E2%80%94%E2%80%94StableVideo%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8/')"><div class="post_cover left"><a href="/2024/08/24/OpenAI%E6%9C%80%E6%96%B0%E7%9A%84Sora%E6%A8%A1%E5%9E%8B%E7%AB%9F%E7%84%B6%E8%A2%AB%E5%90%8A%E6%89%93%E2%80%94%E2%80%94StableVideo%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8/" title="推荐与OpenAI最新的Sora模型相似的产品" style="display: flex;height: 100%;"><img class="post_bg" src="https://img.080912.xyz/file/4c8c51ca6969cac273d86.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="推荐与OpenAI最新的Sora模型相似的产品" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">AI人工智能</div><a class="unvisited-post" href="/2024/08/24/OpenAI%E6%9C%80%E6%96%B0%E7%9A%84Sora%E6%A8%A1%E5%9E%8B%E7%AB%9F%E7%84%B6%E8%A2%AB%E5%90%8A%E6%89%93%E2%80%94%E2%80%94StableVideo%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8/" title="推荐与OpenAI最新的Sora模型相似的产品">未读</a></div><a class="article-title" href="/2024/08/24/OpenAI%E6%9C%80%E6%96%B0%E7%9A%84Sora%E6%A8%A1%E5%9E%8B%E7%AB%9F%E7%84%B6%E8%A2%AB%E5%90%8A%E6%89%93%E2%80%94%E2%80%94StableVideo%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8/" title="推荐与OpenAI最新的Sora模型相似的产品">推荐与OpenAI最新的Sora模型相似的产品</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-24T01:46:51.000Z" title="发表于 2024-08-24 01:46:51" time="2024-08-24 01:46:51">2024-08-24</time><time class="time_hidden" datetime="2026-03-15T03:25:35.615Z" title="更新于 2026-03-15 03:25:35" time="2026-03-15 03:25:35">2026-03-15</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/ChatGPT/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ChatGPT</span></a><a class="article-meta__tags" href="/tags/AI/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI</span></a><a class="article-meta__tags" href="/tags/OpenAI/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>OpenAI</span></a></span></div><div class="content">
+Sora是由OpenAI开发的一种先进的人工智能模型，它能够根据文本描述生成连贯、逼真的视频内容。Sora模型的名称源于日文“空”（そら sora），即天空之意，以示其无限的创造潜力
+
+Sora模型
+这是Sora的官方网站，Sora的功能是可以将文本转换成视频。但是根据OpenAI的习惯，这个新的模型发布后大概率不会免费使用，因为AI模型的训练也是需要成本的。
+
+    引用站外地址
+    
+        
+          
+        
+        
+            Sora: Creating video from text
+             Sora: Creating video from text
+        
+        
+    
+    
+
+相关产品StableVideo虽然Sora模型不能免费使用，但是有免费的替代品——StableVideo。使用上可能会和Sora模型有些不同，毕竟免费。
+以下是它的官网：
+
+    引用站外地址
+    
+        
+          
+        
+        
+      ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/23/exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/')"><div class="post_cover left"><a href="/2024/08/23/exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" title="全网最详细将java项目打包成exe可执行文件" style="display: flex;height: 100%;"><img class="post_bg" src="https://img.080912.xyz/file/92eae4604782d6c5fdbaf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="全网最详细将java项目打包成exe可执行文件" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">Java程序设计</div><a class="unvisited-post" href="/2024/08/23/exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" title="全网最详细将java项目打包成exe可执行文件">未读</a></div><a class="article-title" href="/2024/08/23/exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" title="全网最详细将java项目打包成exe可执行文件">全网最详细将java项目打包成exe可执行文件</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-23T07:55:09.000Z" title="发表于 2024-08-23 07:55:09" time="2024-08-23 07:55:09">2024-08-23</time><time class="time_hidden" datetime="2026-03-21T04:22:34.422Z" title="更新于 2026-03-21 04:22:34" time="2026-03-21 04:22:34">2026-03-21</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a><a class="article-meta__tags" href="/tags/Windows/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Windows</span></a><a class="article-meta__tags" href="/tags/Java/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Java</span></a></span></div><div class="content">
+😀 在当今的软件开发领域，Java仍然是一种非常流行的编程语言，特别是在企业级应用程序中。Java的跨平台特性使得它成为许多开发者的首选。然而，当涉及到在Windows环境下分发Java应用程序时，将Java项目打包成.exe可执行文件可以大大提高用户体验，因为它允许用户以熟悉的方式启动和运行应用程序，而无需关心Java运行时环境的细节。
+
+打包.jar文件在Idea中可以直接打包成.jar文件
+
+
+
+选择主类和目录并点击确定
+
+
+开始打包。。。
+
+打包完成后将jre和.jar文件放到同一个目录下
+
+    引用站外地址
+    
+        
+          
+        
+        
+            Latest Releases | Adoptium
+             Latest Releases | Adoptium
+        
+        
+    
+    
+jre下载链接 👆
+下载exe4j
+    引用站外地址
+    
+        
+          
+        
+        
+            ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="anzhiyufont anzhiyu-icon-chevron-left fa-fw" style="font-weight: inherit; font-size: 1rem;"></i><div class="pagination_tips_prev">上页</div></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/3/#content-inner"><div class="pagination_tips_next">下页</div><i style="font-weight: inherit; font-size: 1rem;" class="anzhiyufont anzhiyu-icon-chevron-right fa-fw"></i></a><div class="toPageGroup"><input id="toPageText" oninput="value=value.replace(/[^0-9]/g,'')" maxlength="3" onkeyup="this.value=this.value.replace(/[^u4e00-u9fa5w]/g,'')" aria-label="toPage"><a id="toPageButton" onclick="anzhiyu.toPage()"><i class="anzhiyufont anzhiyu-icon-angles-right" style="font-weight: inherit; font-size: 1rem;"></i></a></div></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/ico/PixPin_2024-09-21_11-47-48.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">欢迎来到我们的博客，这里汇聚了<b style="color:#fff">AI、前端开发、技术</b>等行业的见解与经验，还有高质量的<b style="color:#fff">文章翻译</b>和<b style="color:#fff">资源分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">在这里，你可以发现丰富的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>，助力你的学习与职业发展。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">NGX</h1><div class="author-info__desc">科技之力，创新之源。</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/ningguoxu" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1831345748" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget"><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>5</sup></a><a href="/tags/ChatGPT/" style="font-size: 1.05rem;">ChatGPT<sup>5</sup></a><a href="/tags/Github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 1.05rem;">Github开源项目<sup>3</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.05rem;">Java<sup>2</sup></a><a href="/tags/OpenAI/" style="font-size: 1.05rem;">OpenAI<sup>3</sup></a><a href="/tags/PhotoShop/" style="font-size: 1.05rem;">PhotoShop<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/Web%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">Web前端<sup>3</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>3</sup></a><a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.05rem;">云服务器<sup>6</sup></a><a href="/tags/%E4%BA%91%E7%94%B5%E8%84%91/" style="font-size: 1.05rem;">云电脑<sup>2</sup></a><a href="/tags/%E5%89%8D%E6%B2%BF%E5%BF%AB%E8%AE%AF/" style="font-size: 1.05rem;">前沿快讯<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.05rem;">图床<sup>2</sup></a><a href="/tags/%E5%B8%81%E5%9C%88/" style="font-size: 1.05rem;">币圈<sup>1</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 1.05rem;">建站<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>12</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>12</sup></a><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" style="font-size: 1.05rem;">浏览器插件<sup>1</sup></a><a href="/tags/%E7%A7%91%E6%8A%80/" style="font-size: 1.05rem;">科技<sup>5</sup></a><a href="/tags/%E7%BB%8F%E6%B5%8E/" style="font-size: 1.05rem;">经济<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.05rem;">网络安全<sup>1</sup></a><a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 1.05rem;">羊毛<sup>6</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 1.05rem;">脚本<sup>1</sup></a><a href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80/" style="font-size: 1.05rem;">黑科技<sup>5</sup></a></div></div><hr/><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/09/"><span class="card-archive-list-date">九月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/><div class="card-webinfo"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-file-lines"></i><div class="item-name">文章总数 :</div></div><div class="item-count">31</div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-stopwatch"></i><div class="item-name">建站天数 :</div></div><div class="item-count" id="runtimeshow" data-publishDate="2024-07-08T00:00:00.000Z"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-font"></i><div class="item-name">全站字数 :</div></div><div class="item-count">36.1k</div></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 - 2026 By <a class="footer-bar-link" href="/" title="NGX" target="_blank">NGX</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20240478" title="萌ICP备-20240478号">萌ICP备-20240478号</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">10</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://stats.uptimerobot.com/AIytbzsz8M" title="Status"><img class="back-menu-item-icon" src="https://stats.uptimerobot.com/assets/favicon.ico" alt="Status"/><span class="back-menu-item-text">Status</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://qexo.080912.xyz" title="Qexo"><img class="back-menu-item-icon" src="https://unpkg.com/qexo-static@3.0.5/qexo/images/icon.png" alt="Qexo"/><span class="back-menu-item-text">Qexo</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ningguoxu.github.io/" title="备用链接"><img class="back-menu-item-icon" src="https://gcore.jsdelivr.net/gh/ngxblog/ico-blog/icon.png" alt="备用链接"/><span class="back-menu-item-text">备用链接</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://qlngx.zeabur.app/" title="青龙"><img class="back-menu-item-icon" src="https://qn.whyour.cn/logo.png" alt="青龙"/><span class="back-menu-item-text">青龙</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/comments/"><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>5</sup></a><a href="/tags/ChatGPT/" style="font-size: 0.88rem;">ChatGPT<sup>5</sup></a><a href="/tags/Github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 0.88rem;">Github开源项目<sup>3</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>1</sup></a><a href="/tags/Java/" style="font-size: 0.88rem;">Java<sup>2</sup></a><a href="/tags/OpenAI/" style="font-size: 0.88rem;">OpenAI<sup>3</sup></a><a href="/tags/PhotoShop/" style="font-size: 0.88rem;">PhotoShop<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>1</sup></a><a href="/tags/Web%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">Web前端<sup>3</sup></a><a href="/tags/Windows/" style="font-size: 0.88rem;">Windows<sup>3</sup></a><a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.88rem;">云服务器<sup>6</sup></a><a href="/tags/%E4%BA%91%E7%94%B5%E8%84%91/" style="font-size: 0.88rem;">云电脑<sup>2</sup></a><a href="/tags/%E5%89%8D%E6%B2%BF%E5%BF%AB%E8%AE%AF/" style="font-size: 0.88rem;">前沿快讯<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 0.88rem;">图床<sup>2</sup></a><a href="/tags/%E5%B8%81%E5%9C%88/" style="font-size: 0.88rem;">币圈<sup>1</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 0.88rem;">建站<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>12</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">教程<sup>12</sup></a><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" style="font-size: 0.88rem;">浏览器插件<sup>1</sup></a><a href="/tags/%E7%A7%91%E6%8A%80/" style="font-size: 0.88rem;">科技<sup>5</sup></a><a href="/tags/%E7%BB%8F%E6%B5%8E/" style="font-size: 0.88rem;">经济<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.88rem;">网络安全<sup>1</sup></a><a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 0.88rem;">羊毛<sup>6</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 0.88rem;">脚本<sup>1</sup></a><a href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80/" style="font-size: 0.88rem;">黑科技<sup>5</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"><a class="tag-list" href="/tags/%E6%95%99%E7%A8%8B" title="教程">教程</a><a class="tag-list" href="/tags/%E6%8A%80%E6%9C%AF" title="技术">技术</a><a class="tag-list" href="/tags/%E7%A7%91%E6%8A%80" title="科技">科技</a><a class="tag-list" href="/tags/AI" title="AI">AI</a><a class="tag-list" href="/tags/%E9%BB%91%E7%A7%91%E6%8A%80" title="黑科技">黑科技</a></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/7819612764&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script async src="/anzhiyu/random.js"></script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="anzhiyu"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
